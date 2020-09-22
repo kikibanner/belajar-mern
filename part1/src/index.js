@@ -67,9 +67,13 @@ const App = () => {
   )
 }
 
+//=====================================
+//=====================================
+//=====================================
+
 const Display = ({ counter }) => <div>{counter}</div>
 
-const Button = ( {handleClick, text} ) => {
+const Tombol = ( {handleClick, text} ) => {
   return (
     <button onClick={handleClick}>
       {text}
@@ -87,25 +91,109 @@ const Hello = () => {
   return(
     <div>
       <Display counter={counter} />
-      <Button 
+      <Tombol 
         handleClick={increaseByOne}
         text='tambah'
       />
-      <Button 
+      <Tombol 
         handleClick={setToZero}
         text='reset'
       />
-      <Button 
+      <Tombol 
         handleClick={decreaseByOne}
         text='kurang'
       />
     </div>
   )
-} 
+}
 
-ReactDOM.render(<Hello />, document.getElementById('joss'))
+//=====================================
+//=====================================
+//=====================================
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const History = (props) => {
+  if (props.allClicks.length === 0) {
+    return (
+      <div>
+        the app is used by pressing the buttons
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      button press history: {props.allClicks.join(' ')}
+    </div>
+  )
+}
+
+const Button = (props) => { 
+  console.log('props value is', props)
+  const { onClick, text } = props
+  return (
+    <button onClick={onClick}>
+      {text}
+    </button>
+  )
+}
+
+const Hi = (props) => {
+  const [left, setLeft] = useState(0)
+  const [right, setRight] = useState(0)
+  const [allClicks, setAll] = useState([])
+
+  const handleLeftClick = () => {
+    setAll(allClicks.concat('Kiri'))
+    setLeft(left + 1)
+  }
+
+  const handleRightClick = () => {
+    setAll(allClicks.concat('Kanan'))
+    setRight(right + 1)
+  }
+
+  return(
+    <div>
+      <div>
+        {left}
+        <Button onClick={handleLeftClick} text="left" />
+        <Button onClick={handleRightClick} text="right" />
+        {right}
+        <History allClicks={allClicks}/>
+      </div>
+    </div>
+  )
+}
+
+//=====================================
+//=====================================
+//=====================================
+
+const Mantab = (props) => {
+  const [value, setValue] = useState(10)
+
+  const setToValue = (newValue) => () => {
+    setValue(newValue)
+  }
+
+  return (
+    <div>
+      {value}
+      <button onClick={setToValue(1000)}>sewu</button>
+      <button onClick={setToValue(0)}>reset</button>
+      <button onClick={setToValue(value + 1)}>penambahan</button>
+    </div>
+  )
+}
+
+//=====================================
+//=====================================
+//=====================================
+
+ReactDOM.render(<App />, document.getElementById('root1'))
+ReactDOM.render(<Hello />, document.getElementById('root2'))
+ReactDOM.render(<Hi />, document.getElementById('root3'))
+ReactDOM.render(<Mantab />, document.getElementById('root4'))
 
 
 
