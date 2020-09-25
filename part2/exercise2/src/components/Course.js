@@ -27,18 +27,4 @@ const Total = ({ course }) => {
     )
 }
 
-/*
-const Content = ({ course }) => {
-  return (
-    <div>
-      <p>
-        {course.parts.map( part =>
-          <Part key={part.id} part={part}/>
-        )}
-      </p>
-    </div>
-  )
-}
-
-*/
 export default Course
