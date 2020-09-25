@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import Courses from './components/Courses'
+import App from './App'
 
-const App = () => {
-  const courses = [
+
+const courses = [
     {
       name: 'Half Stack application development',
       id: 1,
@@ -46,13 +46,11 @@ const App = () => {
         }
       ]
     }
-  ]
-
-  return <Courses course={courses} />
-}
+]
 
 
-ReactDOM.render(<App />, document.getElementById('root'))
+
+ReactDOM.render(<App course={courses}/>, document.getElementById('root'))
 
 
 

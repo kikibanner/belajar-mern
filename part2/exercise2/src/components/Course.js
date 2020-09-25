@@ -1,13 +1,4 @@
-import React, { useState } from 'react'
-
-const Courses = ({ course }) => {
-  return (
-    <div>
-        {course.map(c=>
-            <Course key={c.id} course={c}/>)}
-    </div>
-  )
-}
+import React from 'react'
 
 const Course = ({ course }) => {
   return (
@@ -50,4 +41,4 @@ const Content = ({ course }) => {
 }
 
 */
-export default Courses
+export default Course

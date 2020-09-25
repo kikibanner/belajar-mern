@@ -13,4 +13,4 @@ const App = ({ notes }) => {
     )
   }
   
-  export default App
+export default App
