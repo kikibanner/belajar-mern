@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom'
 
 const Header = (props) => {
   console.log(props)
-  return(
+  return( 
     <div>
       <h1>{props.course}</h1>
     </div>
