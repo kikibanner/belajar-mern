@@ -5,10 +5,10 @@ const App = (props) => {
   const [notes, setNotes] = useState(props.notes)
 
   const addNote = (event) => {
-    event.preventDefault()
-    console.log('tombol ditekan', event.target)
+    event.preventDefault() //method untuk memprevent submitting form scr default seng garakno page ngereload
+    console.log('tombol ditekan', event.target) //event.target menyimpan target (targetnya adalah formnya itu), dan di log ke console
   }
-
+  //part 2b
   return (
     <div>
       <h1>Notes</h1>
