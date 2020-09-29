@@ -9,9 +9,22 @@ const App = (props) => {
 
   const addNote = (event) => {
     event.preventDefault() //method untuk memprevent submitting form scr default seng garakno page ngereload
-    console.log('tombol ditekan', event.target) //event.target menyimpan target (targetnya adalah formnya itu), dan di log ke console
+    const noteObject = {
+      content: newNote,
+      date: new Date().toISOString(),
+      important: Math.random() < 0.5,
+      id: nootes.length + 1,
+    }
+
+    setNotes(notes.concat(noteObject))
+    setNewNote('')
   }
-  //part 2b
+  
+  const handleNoteChange = (event) => {
+    console.log(event.target.value)
+    setNewNote(event.target.value)
+  }
+
   return (
     <div>
       <h1>Notes</h1>
@@ -20,7 +33,9 @@ const App = (props) => {
           <Note key={note.id} note={note} />)}
       </ul>
       <form onSubmit={addNote}>
-          <input />
+          <input 
+            value ={newNote}
+            onChange={handleNoteChange}/>
           <button type="submit">save</button>
       </form>
     </div>
