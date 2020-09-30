@@ -10,7 +10,9 @@ const Person = ({ person }) => {
 
 const App = () => {
   const [ persons, setPersons ] = useState([
-    { name: 'Karto Tuying', id:0}
+    { id: 0, 
+      name: 'Karto Tuying'
+    }
   ])
   const [ newName, setNewName ] = useState('')
 
@@ -21,8 +23,14 @@ const App = () => {
       id: persons.length + 1
     }
 
-    setPersons(persons.concat(personsObject))
-    setNewName('')
+    if (persons.find((p) => p.name === newName)) {
+      alert(`${newName} sudah ada di phonebook`)
+    }
+    else{
+      setPersons(persons.concat(personsObject))
+      setNewName('')
+      console.log(persons.find((p) => p.name === newName))
+    }    
   }
 
   const handlePerson = (event) => {
