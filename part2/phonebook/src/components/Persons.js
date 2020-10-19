@@ -24,6 +24,6 @@ const Person = (props) => {
         {personList}
       </div>
     )
-}
+  }
 
 export default Persons;
