@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import Persons from "./components/Persons";
-import Filter from "./components/Filter";
-import PersonForm from "./components/PersonForm";
-import personService from "./services/persons"
-import Notification from './components/Notification'
+import personService from '../services/person'
+
+import Filter from './Filter'
+import Persons from './Persons'
+import PersonForm from './PersonForm'
+import Notification from './Notification'
 
 const App = () => {
     const [persons, setPersons] = useState([])
@@ -148,4 +148,4 @@ const App = () => {
         </div>
     )
 }
-export default  App
+export default App
