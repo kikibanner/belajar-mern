@@ -69,13 +69,13 @@
     {
       "content": "akakak",
       "date": "2020-10-20T13:18:24.189Z",
-      "important": true,
+      "important": false,
       "id": 12
     },
     {
       "content": "mantap",
       "date": "2020-10-24T13:52:24.223Z",
-      "important": true,
+      "important": false,
       "id": 13
     },
     {
@@ -143,6 +143,12 @@
       "date": "2020-10-24T15:19:11.896Z",
       "important": false,
       "id": 24
+    },
+    {
+      "content": "",
+      "date": "2020-10-24T18:54:53.337Z",
+      "important": false,
+      "id": 25
     }
   ]
 }
