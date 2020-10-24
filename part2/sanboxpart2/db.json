@@ -10,7 +10,7 @@
       "id": 2,
       "content": "Browser can execute only JavaScript",
       "date": "2019-05-30T18:39:34.091Z",
-      "important": false
+      "important": true
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
     {
       "content": "bro",
       "date": "2020-10-20T13:01:33.604Z",
-      "important": true,
+      "important": false,
       "id": 5
     },
     {
@@ -71,6 +71,78 @@
       "date": "2020-10-20T13:18:24.189Z",
       "important": true,
       "id": 12
+    },
+    {
+      "content": "mantap",
+      "date": "2020-10-24T13:52:24.223Z",
+      "important": true,
+      "id": 13
+    },
+    {
+      "content": "joss",
+      "date": "2020-10-24T13:53:36.144Z",
+      "important": false,
+      "id": 14
+    },
+    {
+      "content": "i broke my ass",
+      "date": "2020-10-24T13:54:36.692Z",
+      "important": false,
+      "id": 15
+    },
+    {
+      "content": "i broke my ass",
+      "date": "2020-10-24T13:54:38.046Z",
+      "important": false,
+      "id": 16
+    },
+    {
+      "content": "i broke my balls",
+      "date": "2020-10-24T13:57:05.649Z",
+      "important": false,
+      "id": 17
+    },
+    {
+      "content": "i broke my balls twice",
+      "date": "2020-10-24T14:00:34.295Z",
+      "important": false,
+      "id": 18
+    },
+    {
+      "content": "",
+      "date": "2020-10-24T14:05:48.135Z",
+      "important": false,
+      "id": 19
+    },
+    {
+      "content": "",
+      "date": "2020-10-24T14:05:50.877Z",
+      "important": false,
+      "id": 20
+    },
+    {
+      "content": "",
+      "date": "2020-10-24T14:05:51.569Z",
+      "important": false,
+      "id": 21
+    },
+    {
+      "content": "",
+      "date": "2020-10-24T14:05:52.277Z",
+      "important": false,
+      "id": 22
+    },
+    {
+      "content": "sweden",
+      "date": "2020-10-24T14:06:01.663Z",
+      "important": false,
+      "id": 23
+    },
+    {
+      "content": "pewds",
+      "date": "2020-10-24T15:19:11.896Z",
+      "important": false,
+      "id": 24
     }
   ]
 }
