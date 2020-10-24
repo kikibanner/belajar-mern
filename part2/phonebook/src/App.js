@@ -53,7 +53,15 @@ const App = () => {
         setNewNumber('')
       })
     }
-  
+  }
+
+  const dropName = (person) => {
+    const result = window.confirm(`Delete ${person.name}`)
+    if (result) {
+        personService
+            .drop(person.id)
+        setPersons(persons.filter(p => p.id !== person.id))
+    }
   }
 
   const handlePerson = (event, type) => {
@@ -100,6 +108,7 @@ const App = () => {
       <h2>Numbers</h2>
       <Persons 
         persons={filteredPersons}
+        dropName={dropName}
       />
     </div>
   )
