@@ -1,9 +1,9 @@
 import React from 'react'
 
-const DeleteButton = ({ person, dropName }) => {
+const DeleteButton = ({ person, handleOnDelete }) => {
     return <button
-                onClick={() => dropName(person)}>
-                delete
+        onClick={() => handleOnDelete(person)}>
+        delete
             </button>
 }
 

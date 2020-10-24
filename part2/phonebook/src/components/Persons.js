@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react'
 import DeleteButton from './DeleteButton'
 
-const Persons = ({ persons, dropName }) => {
+const Persons = ({ persons, handleOnDelete }) => {
     return persons.map(person =>
         <div key={person.id}>
             {person.name} {person.number}
             <DeleteButton
                 person={person}
-                dropName={dropName}
+                handleOnDelete={handleOnDelete}
             />
         </div>
     )

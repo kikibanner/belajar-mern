@@ -1,15 +1,11 @@
-import React from "react";
+import React from 'react'
 
-const Filter = (props) => {
-    return(
-      <div>
-        Cari berdasarkan nama :
-        <input
-          value={props.value}
-          onChange={props.handleFilterChange}
-          placeholder="Masukkan nama..."/>
-      </div>
+const Filter = ({ onChange }) => {
+    return (
+        <form>
+            filter shown with<input type="text" onChange={onChange} />
+        </form>
     )
 }
 
-export default Filter;
+export default Filter
