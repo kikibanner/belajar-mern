@@ -3,6 +3,7 @@ import axios from 'axios'
 import Persons from "./components/Persons";
 import Filter from "./components/Filter";
 import PersonForm from "./components/PersonForm";
+import personService from "./services/persons"
 
 const App = () => {
   const [ persons, setPersons ] = useState([])
@@ -22,9 +23,17 @@ const App = () => {
 
   useEffect(hook, [])
 
+  useEffect(() => {
+    personService
+    .getAll()
+    .then(initialPersons => {
+      setPersons(initialPersons)
+    })
+  }, [])
+
   const addName = (event) => {
     event.preventDefault()
-    const personsObject = {
+    const personObject = {
       name: newName,
       number: newNumber, 
       id: persons.length + 1
@@ -32,13 +41,19 @@ const App = () => {
 
     if (persons.find((p) => p.name === newName)) {
       alert(`${newName} sudah ada di phonebook`)
-    }
-    else{
-      setPersons(persons.concat(personsObject))
       setNewName('')
       setNewNumber('')
-      console.log(persons.find((p) => p.name === newName))
-    }    
+    }
+    else{
+      personService
+      .create(personObject)
+      .then(returnedPerson => {
+        setPersons(persons.concat(returnedPerson))
+        setNewName('')
+        setNewNumber('')
+      })
+    }
+  
   }
 
   const handlePerson = (event, type) => {
